@@ -1,0 +1,36 @@
+SINGLE INHERITNCE
+#include <iostream>
+using namespace std;
+
+// Base class
+class Animal
+{
+public:
+    void eat()
+    {
+        cout << "Animal is eating." << endl;
+    }
+};
+
+// Derived class
+class Dog : public Animal
+{
+public:
+    void bark()
+    {
+        cout << "Dog is barking." << endl;
+    }
+};
+
+int main()
+{
+    Dog d;
+
+    d.eat();    // Inherited function
+    d.bark();   // Derived class function
+
+    return 0;
+}
+OUTPUT
+Animal is eating.
+Dog is barking.
