@@ -1,0 +1,60 @@
+HYBRID INHERITENCE
+#include <iostream>
+using namespace std;
+
+// Base class
+class Animal
+{
+public:
+    void eat()
+    {
+        cout << "Animal is eating." << endl;
+    }
+};
+
+// Derived class 1
+class Dog : public Animal
+{
+public:
+    void bark()
+    {
+        cout << "Dog is barking." << endl;
+    }
+};
+
+// Derived class 2
+class Cat : public Animal
+{
+public:
+    void meow()
+    {
+        cout << "Cat is meowing." << endl;
+    }
+};
+
+// Hybrid inheritance (Multiple + Hierarchical)
+class Puppy : public Dog, public Cat
+{
+public:
+    void weep()
+    {
+        cout << "Puppy is weeping." << endl;
+    }
+};
+
+int main()
+{
+    Puppy p;
+
+    p.Dog::eat();   // Access Animal's function through Dog
+    p.bark();
+    p.meow();
+    p.weep();
+
+    return 0;
+}
+OUTPUT
+Animal is eating.
+Dog is barking.
+Cat is meowing.
+Puppy is weeping.
