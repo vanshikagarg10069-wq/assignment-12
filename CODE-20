@@ -1,0 +1,50 @@
+OPERATOR OVERLOADING
+#include <iostream>
+using namespace std;
+
+class Number
+{
+private:
+    int num;
+
+public:
+    Number()
+    {
+        num = 0;
+    }
+
+    void getData()
+    {
+        cout << "Enter a number: ";
+        cin >> num;
+    }
+
+    // Overloading ++ operator
+    void operator++()
+    {
+        ++num;
+    }
+
+    void display()
+    {
+        cout << "Value = " << num << endl;
+    }
+};
+
+int main()
+{
+    Number obj;
+
+    obj.getData();
+
+    ++obj;   // Calls overloaded ++ operator
+
+    cout << "After Increment:" << endl;
+    obj.display();
+
+    return 0;
+}
+OUTPUT
+Enter a number: 10
+After Increment:
+Value = 11
