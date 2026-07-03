@@ -1,0 +1,26 @@
+SWAP TWO NUMBERS
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a, b, temp;
+
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    temp = a;
+    a = b;
+    b = temp;
+
+    cout << "After swapping:" << endl;
+    cout << "First number = " << a << endl;
+    cout << "Second number = " << b << endl;
+
+    return 0;
+}
+OUTPUT
+Enter two numbers: 10 20
+After swapping:
+First number = 20
+Second number = 10
