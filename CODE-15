@@ -1,0 +1,48 @@
+MULTIPLE INHERITENCE
+#include <iostream>
+using namespace std;
+
+// First Base Class
+class Father
+{
+public:
+    void showFather()
+    {
+        cout << "This is Father class." << endl;
+    }
+};
+
+// Second Base Class
+class Mother
+{
+public:
+    void showMother()
+    {
+        cout << "This is Mother class." << endl;
+    }
+};
+
+// Derived Class
+class Child : public Father, public Mother
+{
+public:
+    void showChild()
+    {
+        cout << "This is Child class." << endl;
+    }
+};
+
+int main()
+{
+    Child c;
+
+    c.showFather();
+    c.showMother();
+    c.showChild();
+
+    return 0;
+}
+OUTPUT
+This is Father class.
+This is Mother class.
+This is Child class.
