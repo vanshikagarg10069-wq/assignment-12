@@ -1,0 +1,36 @@
+NESTED EXCEPTION
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a, b;
+
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    try
+    {
+        try
+        {
+            if (b == 0)
+                throw b;
+
+            cout << "Division = " << a / b << endl;
+        }
+        catch (int)
+        {
+            cout << "Inner Catch: Division by zero is not allowed." << endl;
+            throw;   // Rethrow the exception
+        }
+    }
+    catch (int)
+    {
+        cout << "Outer Catch: Exception handled successfully." << endl;
+    }
+
+    return 0;
+}
+OUTPUT
+Enter two numbers: 20 5
+Division = 4
