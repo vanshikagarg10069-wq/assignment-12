@@ -1,0 +1,32 @@
+THIS POINTER
+#include <iostream>
+using namespace std;
+
+class Student
+{
+private:
+    int id;
+
+public:
+    void setData(int id)
+    {
+        this->id = id;   // 'this' pointer refers to the current object
+    }
+
+    void display()
+    {
+        cout << "Student ID = " << this->id << endl;
+    }
+};
+
+int main()
+{
+    Student s;
+
+    s.setData(101);
+    s.display();
+
+    return 0;
+}
+OUTPUT
+Student ID = 101
