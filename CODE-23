@@ -1,0 +1,36 @@
+CLASS TEMPLATES
+#include <iostream>
+using namespace std;
+
+// Class Template
+template <class T>
+class Demo
+{
+private:
+    T value;
+
+public:
+    Demo(T v)
+    {
+        value = v;
+    }
+
+    void display()
+    {
+        cout << "Value = " << value << endl;
+    }
+};
+
+int main()
+{
+    Demo<int> obj1(100);
+    Demo<float> obj2(25.5);
+
+    obj1.display();
+    obj2.display();
+
+    return 0;
+}
+OUTPUT
+Value = 100
+Value = 25.5
